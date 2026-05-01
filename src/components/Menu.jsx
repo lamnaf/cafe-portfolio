@@ -13,7 +13,7 @@ export default function Menu() {
   const filteredItems = filter === "all" ? items : items.filter((item) => item.category === filter)
 
   return (
-    <section id="menu" className="py-20 bg-white dark:bg-gray-900">
+    <section id="menu" className="py-20 md:py-28 bg-white dark:bg-gray-900">
       <div className="max-w-5xl mx-auto px-6">
 
         <h2 className="text-3xl font-bold text-center mb-10 dark:text-white">

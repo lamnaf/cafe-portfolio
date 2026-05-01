@@ -8,7 +8,7 @@ import Testimonials from './components/Testimonials'
 
 export default function App() {
   return (
-    <div className="bg-white dark:bg-gray-900 transition duration-300">
+    <div className="bg-white dark:bg-gray-900 transition duration-300 font-sans">
       <Navbar />
       <Hero />
       <About />

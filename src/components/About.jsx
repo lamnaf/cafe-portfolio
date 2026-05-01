@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 export default function About() {
   return (
-    <section id="about" className="py-20 bg-gray-100 dark:bg-gray-800">
+    <section id="about" className="py-20 md:py-28 bg-gray-100 dark:bg-gray-800">
       <motion.div
         initial={{ opacity: 0, y: 80 }}
         whileInView={{ opacity: 1, y: 0 }}
