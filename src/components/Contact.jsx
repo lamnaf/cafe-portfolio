@@ -1,13 +1,12 @@
 import { useRef, useState } from "react"
 import emailjs from "@emailjs/browser"
 import { motion } from "framer-motion"
+import toast from "react-hot-toast"
 
 export default function Contact() {
   const form = useRef()
 
   const [loading, setLoading] = useState(false)
-  const [success, setSuccess] = useState(false)
-  const [error, setError] = useState("")
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,27 +31,27 @@ export default function Contact() {
 
     const validationError = validate()
     if (validationError) {
-      setError(validationError)
+      toast.error(validationError)
       return
     }
 
-    setError("")
     setLoading(true)
 
-    emailjs.sendForm(
-      "service_lamnaf",
-      "template_lamnaf",
-      form.current,
-      "wBnSlDj-ZoKXIgo3H"
-    )
-    .then(() => {
-      setSuccess(true)
+    toast.promise(
+      emailjs.sendForm(
+        "SERVICE_ID",
+        "TEMPLATE_ID",
+        form.current,
+        "PUBLIC_KEY"
+      ),
+      {
+        loading: "Mengirim pesan...",
+        success: "Pesan berhasil dikirim 🎉",
+        error: "Gagal mengirim pesan ❌",
+      }
+    ).finally(() => {
       setLoading(false)
       form.current.reset()
-    })
-    .catch(() => {
-      setError("Gagal mengirim pesan")
-      setLoading(false)
     })
   }
 
@@ -86,18 +85,6 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-
-          {/* Error Message */}
-          {error && (
-            <p className="text-red-500 text-sm">{error}</p>
-          )}
-
-          {/* Success Message */}
-          {success && (
-            <p className="text-green-500 text-sm">
-              Pesan berhasil dikirim 🎉
-            </p>
-          )}
 
           <input
             type="text"
