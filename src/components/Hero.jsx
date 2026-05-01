@@ -28,6 +28,36 @@ export default function Hero() {
       </div>
 
       {/* Content */}
+      {/* Floating Elements */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <motion.div
+          className="absolute top-20 left-10 w-12 h-12 bg-amber-400/30 rounded-full blur-xl"
+          animate={{ y: [0, -30, 0], x: [0, 10, 0] }}
+          transition={{ duration: 6, repeat: Infinity }}
+        />
+
+        <motion.div
+          className="absolute bottom-20 right-16 w-16 h-16 bg-white/20 rounded-full blur-xl"
+          animate={{ y: [0, 40, 0] }}
+          transition={{ duration: 8, repeat: Infinity }}
+        />
+
+        <motion.div
+          className="absolute top-1/2 left-1/3 w-10 h-10 bg-amber-300/30 rounded-full blur-lg"
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 5, repeat: Infinity }}
+        />
+
+        <motion.div
+          className="absolute top-32 right-1/4 text-3xl"
+          animate={{ y: [0, -25, 0] }}
+          transition={{ duration: 6, repeat: Infinity }}
+        >
+          ☕
+        </motion.div>
+        
+      </div>
+      
       <motion.div
         style={{ y: yText }}
         initial={{ opacity: 0, y: 40 }}
