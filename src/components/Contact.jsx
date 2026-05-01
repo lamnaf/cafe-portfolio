@@ -39,10 +39,10 @@ export default function Contact() {
 
     toast.promise(
       emailjs.sendForm(
-        "service_lamnaf",
-        "template_lamnaf",
+        import.meta.env.VITE_SERVICE_ID,
+        import.meta.env.VITE_TEMPLATE_ID,
         form.current,
-        "wBnSlDj-ZoKXIgo3H"
+        import.meta.env.VITE_PUBLIC_KEY
       ),
       {
         loading: "Mengirim pesan...",
