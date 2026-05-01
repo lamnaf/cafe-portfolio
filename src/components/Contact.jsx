@@ -40,10 +40,10 @@ export default function Contact() {
     setLoading(true)
 
     emailjs.sendForm(
-      "SERVICE_ID",
-      "TEMPLATE_ID",
+      "service_lamnaf",
+      "template_lamnaf",
       form.current,
-      "PUBLIC_KEY"
+      "wBnSlDj-ZoKXIgo3H"
     )
     .then(() => {
       setSuccess(true)
