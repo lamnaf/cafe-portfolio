@@ -2,8 +2,6 @@
 
 Modern cafe landing page built with React + Tailwind + Framer Motion.
 
-🌐 Live Demo: https://cafe-portfolio-ten.vercel.app/
-
 ## Features
 - Responsive design
 - Dark mode
@@ -17,3 +15,13 @@ Modern cafe landing page built with React + Tailwind + Framer Motion.
 - Framer Motion
 - EmailJS
 - Vercel
+
+## 🚀 Live Demo
+
+👉 https://cafe-portfolio-ten.vercel.app/
+
+## 📸 Preview
+
+<p align="center">
+  <img src="./preview.png" width="800" />
+</p>
