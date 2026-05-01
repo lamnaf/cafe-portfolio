@@ -39,10 +39,10 @@ export default function Contact() {
 
     toast.promise(
       emailjs.sendForm(
-        "SERVICE_ID",
-        "TEMPLATE_ID",
+        "service_lamnaf",
+        "template_lamnaf",
         form.current,
-        "PUBLIC_KEY"
+        "wBnSlDj-ZoKXIgo3H"
       ),
       {
         loading: "Mengirim pesan...",
