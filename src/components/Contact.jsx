@@ -59,11 +59,23 @@ export default function Contact() {
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
 
-        <h2 className="text-3xl font-bold mb-8 text-center dark:text-white">
-          Hubungi Kami
-        </h2>
+        <div className="space-y-4">
+          <h2 className="text-3xl font-bold dark:text-white">
+            Hubungi Kami
+          </h2>
+
+          <p className="text-gray-600 dark:text-gray-300">
+            Silakan hubungi kami untuk reservasi atau pertanyaan.
+          </p>
+
+          <div className="space-y-2 text-gray-700 dark:text-gray-300">
+            <p>📍 Jl. Kopi Nusantara No. 10</p>
+            <p>📞 +62 812-3456-7890</p>
+            <p>📧 cafe@email.com</p>
+          </div>
+        </div>
 
         <motion.form
           ref={form}
