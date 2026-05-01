@@ -23,5 +23,17 @@ Modern cafe landing page built with React + Tailwind + Framer Motion.
 ## 📸 Preview
 
 <p align="center">
-  <img src="./preview.png" width="800" />
+  <img src="/public/assets/Home.png" width="800" />
+</p>
+
+<p align="center">
+  <img src="/public/assets/Menu.png" width="800" />
+</p>
+
+<p align="center">
+  <img src="/public/assets/Testimonials.png" width="800" />
+</p>
+
+<p align="center">
+  <img src="/public/assets/Contact.png" width="800" />
 </p>
