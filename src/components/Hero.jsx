@@ -1,6 +1,17 @@
-import { motion } from "framer-motion"
+import { motion, useScroll, useTransform } from "framer-motion"
 
 export default function Hero() {
+
+  const { scrollY } = useScroll()
+
+  // gerakan background
+  const yBg = useTransform(scrollY, [0, 500], [0, 150])
+
+  // gerakan text (lebih cepat)
+  const yText = useTransform(scrollY, [0, 500], [0, 250])
+
+  const blur = useTransform(scrollY, [0, 300], [0, 6])
+
   return (
     <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
 
@@ -9,9 +20,7 @@ export default function Hero() {
         <motion.img
           src="https://images.unsplash.com/photo-1509042239860-f550ce710b93"
           className="w-full h-full object-cover"
-          initial={{ scale: 1.1 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 6 }}
+          style={{ y: yBg, filter: `blur(${blur}px)` }}
         />
 
         {/* Overlay gelap */}
@@ -20,6 +29,7 @@ export default function Hero() {
 
       {/* Content */}
       <motion.div
+        style={{ y: yText }}
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
