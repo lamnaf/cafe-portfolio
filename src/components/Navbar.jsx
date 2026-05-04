@@ -48,7 +48,7 @@ export default function Navbar() {
 
           {menuOpen && (
             <div
-              className={`absolute top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-xl backdrop-blur-md p-6 flex flex-col gap-4 md:hidden transition-all duration-300 ${
+              className={`absolute z-10 top-16 left-0 w-full bg-white dark:bg-gray-900 shadow-xl backdrop-blur-md p-6 flex flex-col gap-4 md:hidden transition-all duration-300 ${
                 menuOpen ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5 pointer-events-none"
               }`}
             >
